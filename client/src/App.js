@@ -4,6 +4,7 @@ import {
   Routes,
   Route,
 } from 'react-router-dom';
+import './App.css'
 import Chat from './Components/Chat'
 import Join from './Components/Join'
 import NotFound from './Components/NotFound';
