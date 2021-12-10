@@ -8,7 +8,7 @@ const Join = () => {
 
     return (
         <div className='join_Container'>
-            <div>
+            <div className='join_Title'>
                 <h1 className='heading'>Messages WebSite.</h1>
             </div>
 
@@ -21,7 +21,7 @@ const Join = () => {
             <div>
             <input
                 placeholder='채팅방'
-                className='join_Room'
+                className='join_Input'
                 type='text'
                 onChange={(event) => setRoom(event.target.value)}
             />
@@ -29,9 +29,10 @@ const Join = () => {
             <Link
             onClick={(e) => (!name || !room ? e.preventDefault() : null)}
             to={`/chat?name=${name}&room=${room}`}
+            // to={`/chat?${room}`}
             >
             <button className='room_Create' type='submit'>
-            가입하기
+            방 만들기
             </button>
             </Link>
 
