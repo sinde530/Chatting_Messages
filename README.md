@@ -25,6 +25,10 @@ node index.js
 
 ### Client
 1. react-router-dom
+2. query-string
+3. socket.io-client
+4. react-scrill-to-bottom
+5. emoji-picker-react
 
 ## Server
 1. socket.io
