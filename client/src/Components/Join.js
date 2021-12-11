@@ -19,21 +19,23 @@ const Join = () => {
                 onChange={(event) => setName(event.target.value)}
             />
             <div>
-            <input
-                placeholder='채팅방'
-                className='join_Input'
-                type='text'
-                onChange={(event) => setRoom(event.target.value)}
-            />
+                <input
+                    placeholder='채팅방'
+                    className='join_Input'
+                    type='text'
+                    onChange={(event) => setRoom(event.target.value)}
+                />
             </div>
             <Link
-            onClick={(e) => (!name || !room ? e.preventDefault() : null)}
-            to={`/chat?name=${name}&room=${room}`}
+                // e는 합성 이벤트 (SyntheticEvent)
+                // 매개변수가 1개일땐 ( ) 소괄호 생략 가능
+                onClick={(e) => (!name || !room ? e.prevnetDefault() : null)}
+                to={`/chat?name=${name}&room=${room}`}
             // to={`/chat?${room}`}
             >
-            <button className='room_Create' type='submit'>
-            방 만들기
-            </button>
+                <button className='room_Create' type='submit'>
+                    방 만들기
+                </button>
             </Link>
 
         </div>
